@@ -1,4 +1,3 @@
-import React from "react";
 import { Slot } from "expo-router";
 import { SafeAreaView } from "react-native";
 import {
@@ -7,7 +6,7 @@ import {
   Inter_500Medium,
   Inter_600SemiBold,
   Inter_700Bold,
-} from "@expo-google-fonts/inter";
+} from '@expo-google-fonts/inter'
 import { Loading } from "@/components/loading";
 
 export default function Layout() {
@@ -16,15 +15,15 @@ export default function Layout() {
     Inter_500Medium,
     Inter_600SemiBold,
     Inter_700Bold,
-  });
+  })
 
   if (!fontsLoaded) {
-    return <Loading />;
+    return <Loading />
   }
 
   return (
-    <SafeAreaView className="">
+    <SafeAreaView className="flex-1 bg-slate-900">
       <Slot />
     </SafeAreaView>
-  );
+  )
 }
